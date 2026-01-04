@@ -1,0 +1,33 @@
+package Ejercicios_Strings_YO;
+
+import java.util.Scanner;
+
+public class Strings5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	  //Paso 1 declaramos y leemos 3 cadenas
+		String cadena1;
+		String cadena2;
+		String cadena3;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce la primera cadena");
+		cadena1 = sc.nextLine();
+		System.out.println("Introduce la segunda cadena");
+		cadena2 = sc.nextLine();
+		System.out.println("Introduce la tercera cadena");
+		cadena3 = sc.nextLine();
+		if(cadena1.compareToIgnoreCase(cadena2) > 0) {
+			System.out.println(cadena1);
+			System.out.println(cadena2);
+		}
+			else if(cadena1.compareToIgnoreCase(cadena2) < 0){
+				System.out.println(cadena2);
+				System.out.println(cadena1);
+			}
+			else {
+				System.out.println("Son iguales");
+			}
+	}
+
+}

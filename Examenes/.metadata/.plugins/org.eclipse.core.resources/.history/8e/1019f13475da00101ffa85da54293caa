@@ -1,0 +1,9 @@
+package Examen;
+
+public class ApellidoException {
+
+	public ApellidoException(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

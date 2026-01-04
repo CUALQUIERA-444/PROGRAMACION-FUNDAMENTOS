@@ -1,0 +1,37 @@
+package Excepciones_YO;
+
+import java.util.Scanner;
+
+public class Excepciones4 {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		 * 4. Modifica la función que valida el DNI para que dé error si los primeros
+		caracteres no son dígitos usando NumberFormatException.
+		 */
+		
+		//Pedimos el DNI 
+		
+		String DNI;
+		String validacion;
+		String confirmacion = "";
+		double numero = 0;
+		String regex = "^[0-9]{8}";
+		try {
+		System.out.println("INTRODUCE TU DNI (FORMATO 8 DIGITOS Y UNA LETRA");
+		DNI = sc.nextLine();
+		validacion = Validar(DNI,confirmacion,regex);
+		}
+		catch (NoEncaja e) {
+			System.out.println(e.getMessage());
+		}
+		//3 EXCEPCIONES UNA NUEVA PARA VALIDAR LOS DATOS INTRODUCIDOS LA SEGUNDA PARA VALIDAR UNA CONVERSION Y LO DE LA LETRA DE CONVERSIÓN
+	}
+	public static String Validar (String con,String D, String reg) throws NoEncaja{
+		if (D.matches(reg) == true){
+			con = "yes";
+		}
+		throw new NoEncaja ("Formato de número incorrecto");
+	}
+}

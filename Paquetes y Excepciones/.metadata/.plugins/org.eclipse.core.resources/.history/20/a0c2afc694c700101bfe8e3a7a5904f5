@@ -1,0 +1,53 @@
+package Ejercicios_Strings_YO;
+
+import java.util.Scanner;
+
+public class Strings3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Paso 1 lee nombre y primer apellido de una persona
+		Scanner sc = new Scanner(System.in);
+		String nombre;
+		String primer_apellido;
+		String segundo_apellido;
+		String codigo;
+		System.out.println("Introduce tu nombre");
+		nombre = sc.nextLine();
+		System.out.println("Introduce tu primer apellido");
+		primer_apellido = sc.nextLine();
+		//Paso 2 Del Nombre y apellido GENERAR CÓDIGO EN UNA FUNCIÓN
+		codigo = Generar_codigo(nombre,primer_apellido);
+		//Paso 4 pedimos el segundo apellido y lo enviamos como parametro usando la misma funcion
+		if ( codigo.equals("error")) {
+			System.out.println("Introduce tu segundo apellido");
+			segundo_apellido = sc.nextLine();
+			codigo = Generar_codigo(nombre,segundo_apellido);
+		}
+		System.out.println("Tu código es"+ " "+codigo);
+	}
+
+	public static String Generar_codigo(String n, String ap_g) {
+		//Paso 3 si el primer apellido tiene longitud inferior a 3 se pide el segundo apellido y guardamos el primero
+		//extraemos la primera letra del nombre y las 3 primeras del apellido
+		String ap_1 = ap_g; //Se guarda el primer apellido
+		String extraccion_n = n.substring(0,1);
+		String extraccion_ap1 = ap_1.substring(0,3);
+		if (ap_1.length() < 3) {
+			return "error";
+		}
+			String ap_2 = ap_g; //Se guarda el segundo apellido
+			String extraccion_ap2 = ap_2.substring(0,3);
+			if(ap_2.length() < 3) 
+				if(ap_1.length() > ap_2.length()) {
+					return extraccion_n+ap_1;
+				}
+				else if (ap_2.length() > ap_1.length()) {
+					return extraccion_n+ap_2;
+				}
+				else {
+			return extraccion_n+extraccion_ap2;
+				}
+		return extraccion_n+extraccion_ap1;
+		}
+	}

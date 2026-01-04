@@ -1,0 +1,33 @@
+package práctica6;
+
+import java.util.Scanner;
+
+public class Alternative4_Práctica6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	final double normal_adultos = 3 , reducida_adultos = 2, normal_niños = 2,reducida_niños = 1.2;
+	int niños;
+	int adultos;
+	double recaudación;
+	double totalgrupo = 0;
+	boolean discapacidad;
+	int máximo = 0;
+	Scanner sc = new Scanner(System.in);
+	do {
+		System.out.println("Introduce la cantidad total de adultos");
+		adultos = sc.nextInt();
+		System.out.println("Introduce la cantidad total de niños");
+		niños = sc.nextInt();
+		System.out.println("Tiene discapacidad?(true/false)");
+		discapacidad = sc.nextBoolean();
+		if ( discapacidad )  //Se aplica la tarifa si se introduce true
+			totalgrupo = reducida_adultos*adultos+reducida_niños*niños;
+		else 
+			totalgrupo= normal_adultos*adultos + normal_niños*niños; //Si no sigue con esta sentencia
+			recaudación = totalgrupo + totalgrupo; // En la primera vuelta se esta haciendo recaudación = 76 + 0;
+			System.out.println(recaudación+"€");
+	} while ( recaudación <= 100);
+	System.out.println("Se han recuadado más de 100 euros(FIN DEL PROGRAMA)");
+	}
+}

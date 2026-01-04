@@ -1,0 +1,26 @@
+package Examen;
+
+import java.util.Scanner;
+
+public class EXAMEN {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Se lee de teclado en un unico String el nombre y 2 apellidos del alumno. Mediante una función se calcula
+		//el código del alumno que está formado por la primera letra de cada palabra en mayúsculas 
+		//Por ejemplo: El código de "Pedro Lorenzo Sanz". será "PLS Generalizarlo para cualquier número de palabras
+		Scanner sc = new Scanner (System.in);
+		String nombre;
+		String nombre_completo;
+		System.out.println("Introduce tu nombre completo (Nombre y como minimo 2 apellidos Cada dato empieza en mayúsculas");
+		nombre= sc.nextLine();
+		nombre = nombre.trim();
+		System.out.println(nombre.length());
+	}
+	//Crear un substring cada vez que se encuentre una mayuscula
+}
+
+//A continuacion se calcula de forma aleatoria la nota del alumno entre 
+//(0 y 9)
+
+

@@ -1,0 +1,33 @@
+package Ejercicios_Strings_YO;
+import java.util.IllegalFormatCodePointException;
+import java.util.Scanner;
+public class Strings8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Funcion para comprobar
+		String cadena1;
+		String cadena2;
+		String  verificacion;
+		int contador = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce una cadena");
+		cadena1 = sc.nextLine();
+		System.out.println("Introduce otra cadena");
+		cadena2= sc.nextLine();
+		cadena1 = cadena1.toUpperCase();
+		cadena2 = cadena2.toUpperCase();
+		verificacion = Caben_Strings(cadena1,cadena2);
+		System.out.println("si caben");
+	}
+		public static String Caben_Strings (String c1, String c2) {
+			//Nota indexOf no diferencia mayusculas y minusculas
+			if (c1.length() < c2.length()) {
+			System.out.println(c2.indexOf(c1));
+			return "si caben";
+			}
+			// else if (c2.length() < c1.length())
+				
+		return "Son iguales";
+		}
+}

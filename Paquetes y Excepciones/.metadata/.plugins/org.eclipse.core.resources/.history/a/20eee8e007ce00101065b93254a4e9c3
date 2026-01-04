@@ -1,0 +1,11 @@
+package yo_fechas;
+
+public class Fecha_8 {
+//8.Simular durante 1 segundo el lanzamiento de un dado, pasado ese tiempo
+//mostrar la cantidad de seises que han salido
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

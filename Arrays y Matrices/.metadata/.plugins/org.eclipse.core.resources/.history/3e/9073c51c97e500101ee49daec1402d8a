@@ -1,0 +1,19 @@
+package ejerciciosarrays;
+
+import java.util.Scanner;
+
+public class Ejercicio8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//8. Dado un array de 10 números decid cual es el número que más se repite.
+		//int numeros[] = new int [10];
+		int numeros[] = {0,6,6,6,6,1,2,3,3,2};
+		int indice = 0;
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < numeros.length; i++) {
+			System.out.print("Mostrar array "+numeros[i]);
+		}
+	}
+
+}

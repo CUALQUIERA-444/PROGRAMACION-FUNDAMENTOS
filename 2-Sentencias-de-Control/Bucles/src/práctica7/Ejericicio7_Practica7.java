@@ -1,0 +1,24 @@
+package práctica7;
+
+import java.util.Scanner;
+
+public class Ejericicio7_Practica7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int dia;
+		boolean validador_dias;
+		System.out.println("Introduce un dia (Del 1 al 365)");
+		dia = sc.nextInt();
+		if ( validador_dias(dia)) 
+			System.out.println("Funciona el válidador");
+		else 
+			System.out.println("Introduce un día válido");
+	}
+	public static boolean validador_dias (int d) {
+		if ( d <= 1 && d >=365)
+			return
+		return false;
+	}
+}

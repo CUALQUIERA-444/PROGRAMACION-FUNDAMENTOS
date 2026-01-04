@@ -1,0 +1,40 @@
+package ejerciciosarrays;
+
+import java.util.Scanner;
+
+public class Ejercicio6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/* 6.Leed números de teclado del 0 al 9 hasta que lo desee el usuario. Mostrad al
+		finalizar cuántos números se han leído de cada uno. Usad un array de frecuencias.
+		*/
+		Scanner sc = new Scanner (System.in);
+		//LOGICA 
+		
+		//La idea es usar 1 array 
+		//VAYA RELLENANDO Y 
+		int numero;
+		int frecuencias [] = new int [10];
+		int busqueda;
+		int contador = 0;
+		String confirmacion;
+		boolean validacion = false;
+		do {
+		System.out.println("Introduzca números del (0 al 9)");
+		numero = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Desea continuar?(SI/NO)");
+		confirmacion = sc.nextLine();
+		
+		if (confirmacion.equalsIgnoreCase("NO"))
+			validacion = true;
+		}
+		while (validacion == false);
+		//Como relacionar 10 ifs y 10 contadores con un array de 10 posiciones.
+		for (int j = 0; j<frecuencias.length;j++) {
+		if(j == numero) //Si la posicion es igual al numero dicho numero se tiene que contar y donde guardo el contador?
+		frecuencias[j] = contador++;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+package práctica5;
+
+import java.util.Scanner;
+import java.util.Locale;
+public class Ejercicio11_Normal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double num;
+		int contador_par = 0;
+		int contador_impar = 0;
+		int contador_nulos = 0;
+		Scanner sc = new Scanner(System.in);
+		sc.useLocale(Locale.ENGLISH);
+			for ( int i = 0; i <=99 ; i++) {
+			System.out.println("Introduzca un número y repita el proceso 100 veces");
+			num = sc.nextDouble();
+			while (num != 0) {
+				if ( num % 2 == 0 )
+				contador_par++;
+				else 
+				contador_impar++;
+			}
+			if ( num == 0)
+				contador_nulos++;
+			}
+		System.out.println("La cantidad de números pares es de:"+contador_par);
+		System.out.println("La cantidad de números impares es de:"+contador_impar);
+		System.out.println("La cantidad de números nulos es de:"+contador_nulos);
+	}
+
+}

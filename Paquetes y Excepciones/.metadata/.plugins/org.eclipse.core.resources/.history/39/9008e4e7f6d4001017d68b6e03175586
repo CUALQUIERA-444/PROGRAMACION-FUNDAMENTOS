@@ -1,0 +1,36 @@
+package PrácticaArrays;
+
+import java.util.Scanner;
+
+public class Array3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*El usuario dice cuántos números va a leer, a continuación leemos la cantidad de
+números indicada y los guardamos en un array. Decid cuántas veces se repite el
+último número.
+*/
+		//Usuario leer el numero
+		int usuario;
+		int contador = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce la cantidad de numeros que va leer");
+		usuario = sc.nextInt();
+		
+		//Crear y recorrer array 
+		int numeros[] = new int[usuario];
+		for (int i = 0; i<numeros.length; i++) {
+		System.out.println("Introduce numeros para ir rellenando el array");
+		numeros[i] = sc.nextInt();
+		}
+		
+		//Volver a leer el array mostrar el array y cumplir la condicion 
+		for (int a = 0; a<numeros.length; a++) {
+		if ( numeros[a] == numeros[numeros.length-1]) {
+			// int contador = 0; Cada vez que se reinicia el bucle esto vuelve a 0 
+			contador++;
+		}
+		}
+		System.out.println("El número "+numeros[numeros.length-1]+" se repite un total de "+contador+" veces");
+	}
+}

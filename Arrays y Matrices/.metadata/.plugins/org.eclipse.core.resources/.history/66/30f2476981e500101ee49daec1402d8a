@@ -1,0 +1,45 @@
+package ejerciciosarrays;
+
+import java.util.Scanner;
+
+public class EjercicioBis7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*7. Leed de teclado 2 arrays de 5 números. Decid:
+			a. Qué números están en los dos arrays.
+			b. Qué números aparecen sólo en el primer array.
+		*/
+		Scanner sc = new Scanner (System.in);
+		int numeros_version1[] = new int[4];
+		int numeros_version2[] = new int[4];
+		int numeros_primero[] = new int[4];
+		for (int i = 0; i<numeros_version1.length;i++) {
+			System.out.println("Introduce un número para ir rellenando el array");
+			numeros_version1[i] = sc.nextInt();
+			//2,1,4,6 //Mismo array pero modificando datos?
+		}
+		for (int j = 0; j<numeros_version2.length;j++) {
+			System.out.println("Introduce un número para ir rellenando el segundo array");
+			numeros_version2[j] = sc.nextInt();
+			//2,3,1,4 Solo aparece el 6 en el primer array Lo mismo que el anterior
+		}
+		for (int k = 0; k<numeros_version1.length;k++) {
+			for (int l = 0; l<numeros_version2.length;l++) {
+				if (numeros_version1[k] == numeros_version2[l]) {
+					System.out.print(numeros_version2[l]+" ");
+					break;
+				}
+			}
+		}
+		System.out.println("");
+		for (int m = 0; m < numeros_version1.length; m++) {
+			for (int n = 0; n < numeros_version2.length; n++) {
+				if (numeros_version1[m] == numeros_version2[n])
+					break;
+				else 
+				}
+			}
+		}
+	}
+

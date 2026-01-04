@@ -1,0 +1,35 @@
+package práctica6;
+
+import java.util.Scanner;
+
+public class Ejercicio2_Práctica6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num; 
+		int acumulador_suma = 0;
+		int contador_ceros = 0;
+		boolean cero = true ;
+		Scanner sc= new Scanner (System.in);
+		do {
+		System.out.println("Introduce numeros consecutivamente hasta que la suma de todos ellos sea mayor que 100");
+		num = sc.nextInt();
+		if ( num <= 100) {
+		if ( num != 0) 
+			acumulador_suma = num + acumulador_suma;
+			System.out.println(acumulador_suma);
+		}
+		if ( num == 0 ) {
+			cero = true;
+			contador_ceros++;
+		}
+		else  {
+			System.out.println("El número es mayor que 0 por lo que fin del programa");
+			System.exit(0);
+		}
+	}
+	while (acumulador_suma <= 100);
+		if (cero == true)
+			System.out.println("Si ha introducido ceros"+" "+contador_ceros+" "+"para ser más especifícos");
+}
+}

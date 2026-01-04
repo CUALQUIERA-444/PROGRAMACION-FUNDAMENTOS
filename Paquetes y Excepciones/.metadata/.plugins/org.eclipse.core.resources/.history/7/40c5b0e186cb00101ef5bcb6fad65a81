@@ -1,0 +1,58 @@
+package yo_fechas;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+public class Fecha_2 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Metodo leer por separado
+		int año = 0;
+		int mes = 0;      
+		int dia = 0;	//SIN VALORES
+		int dia2 = 0;
+		int mes2 = 0;
+		int año2 = 0;
+		LocalDate fecha1;
+		LocalDate fecha2;
+		boolean validacion = true;
+		Scanner sc = new Scanner (System.in);
+		do { //Hacer esto mientras validacion sea falso
+			try {
+			//Asigna valores a dia,mes y año si entra en el try
+			System.out.println("Introduzca un año");
+			año = sc.nextInt();
+			System.out.println("Introduzca un mes");
+			mes = sc.nextInt();
+			System.out.println("Introduzca un día");
+			dia = sc.nextInt();
+			System.out.println("Introduzca un segundo año");
+			año2 = sc.nextInt();
+			System.out.println("Introduzca un segundo mes");
+			mes2 = sc.nextInt();
+			System.out.println("Introduzca un segundo día");
+			dia2 = sc.nextInt();
+			validacion = true;
+		}
+		catch (InputMismatchException e) {
+			System.out.println("Numero incorrecto");
+			validacion = false;
+			sc.nextInt();
+		}
+		}
+		while (validacion == false); //Necesario inicializar para comparar
+		DateTimeFormatter patron; 
+		patron = DateTimeFormatter.ofPattern("d/MM/yyyy");
+		fecha1 = LocalDate.of(dia,mes,año);
+		fecha2 = LocalDate.of(dia2, mes2, año2);//No es necesario validar la fecha ya que ya estoy revisando que me meta entero
+		if (fecha1.isBefore(fecha2)) {
+			System.out.println("La primera fecha es "+patron.format(fecha1));
+		    System.out.println("La segunda fecha es "+patron.format(fecha2));
+		}
+		    else {
+		    System.out.println("La primera fecha es "+patron.format(fecha2));
+			System.out.println("La segunda fecha es "+patron.format(fecha1));	
+		    }
+		}
+	}

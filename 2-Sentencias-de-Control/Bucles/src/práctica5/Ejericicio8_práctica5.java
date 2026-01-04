@@ -1,0 +1,24 @@
+package práctica5;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Ejericicio8_práctica5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double salario;
+		int contador = 0;
+		int contador_salario = 0;
+		Scanner sc = new Scanner (System.in);
+		sc.useLocale(Locale.ENGLISH);
+		while (contador < 10) {
+		System.out.println("Introduzca su salario");
+		salario = sc.nextDouble();
+		contador++;
+		if (salario > 1000) 
+			contador_salario++;
+	}
+		System.out.println(contador_salario);
+}
+}

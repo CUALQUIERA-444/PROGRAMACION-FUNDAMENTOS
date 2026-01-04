@@ -1,0 +1,9 @@
+package PrácticaArrays;
+
+public class Snippet {
+	Queremos llevar las ventas de 6 comerciales. Primero anota el nombre de los
+	comerciales. Después, mientras lo desee el usuario lee el nombre de comercial y
+	las unidades vendidas por éste y acumúlalas. Al finalizar muestra por cada
+	comercial el número de ventas realizadas.
+}
+

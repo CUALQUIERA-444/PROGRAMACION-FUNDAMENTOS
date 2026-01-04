@@ -1,0 +1,30 @@
+package Ejercicios_Strings_YO;
+
+import java.util.Scanner;
+
+public class Strings6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Programa que nos dice si una palabra se lee igual del derecho que 
+		// del reves 
+		String palabra;
+		boolean confirmacion;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce una palabra");
+		palabra = sc.nextLine();
+		confirmacion = Comprobar_orientacion(palabra);
+		if (confirmacion == true)
+		System.out.println("Se lee igual al derecho que del reves");
+		else 
+		System.out.println("No se lee igual");
+	}
+     public static boolean Comprobar_orientacion(String palabra) {
+    	for ( int i = 0, j = palabra.length()-1; i<j && j>i; i++,j-- ) {
+    		if ( palabra.charAt(i) == palabra.charAt(j))
+    				return true;
+    	}
+    	System.out.println("cualquiera");
+    	return false;
+     }
+}

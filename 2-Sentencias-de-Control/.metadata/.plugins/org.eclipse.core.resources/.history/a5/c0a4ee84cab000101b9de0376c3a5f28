@@ -1,0 +1,103 @@
+package práctica7;
+
+import java.util.Scanner;
+
+public class Begoña_Ejercicio6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		boolean seguir;
+		Scanner sc = new Scanner(System.in); //Me dan bien los datos
+		do {
+		System.out.println("Anota día:");
+		int dia = sc.nextInt();
+		System.out.println("Anota mes:");
+		int mes = sc.nextInt();
+		System.out.println("Anota año:");
+		int año = sc.nextInt();
+		if (validarFecha(dia,mes,año)==false)
+				System.out.println("Fecha incorrecta");
+		else {
+		int total = diasAño(dia,mes,año);
+		System.out.println("El dia del año es:"+total);
+		}
+		System.out.println("Quieres anotara otra fecha?(true/false");
+		seguir = sc.nextBoolean();
+	} while (seguir);
+}
+	public static boolean validarFecha(int dia, int mes,int año) {
+		if (año < 0)
+			return false;
+		switch (mes) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			if (dia <1 || dia>31)
+				return false;
+			return true;
+		case 4:
+		case 6:
+		case 9: 
+		case 11: 
+			if (dia<1 || dia>30)
+				return false;
+			return true;
+		case 2: 
+			if (esBisiesto(año))
+				if (dia<1 || dia>30)
+					return false;
+				else 
+					return true;
+			else 
+				if (dia < 1 || dia > 28)
+					return false;
+				else
+					return true;
+			default:
+				return false;
+		}
+	}
+	public static int diasAño(int d, int m, int a) {
+			int totalDias = 0;
+		for (int i = 1; i<m; i++) {
+		totalDias = totalDias + diasMes(i,a);
+		}
+		return d+totalDias;
+	}
+	public static int diasMes(int m, int a) {
+		switch (m) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			return 31; //Salgo de la función devolviendo ese valor
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			return 30;
+		case 2: 
+			if (esBisiesto(a))
+			return 29;
+		return 28;
+		default:
+			return -1; //-1 se utiliza para indicar algo que ha ido mal le devuelve -1
+		}
+	}
+	public static boolean esBisiesto(int a ) {
+		if (a%4 != 0) //Todos los multipos de 4 son bisisestos 
+		return false;
+		/*
+		 * if (a% 100 != 0 || a%100!=400)
+		   
+		 */
+	return true;
+	}
+}

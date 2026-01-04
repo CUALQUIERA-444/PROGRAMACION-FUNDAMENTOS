@@ -1,0 +1,10 @@
+package Tema2;
+
+public class ejercicio1_Instrucciones_repeticion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

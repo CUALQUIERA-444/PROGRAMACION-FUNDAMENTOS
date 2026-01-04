@@ -1,0 +1,38 @@
+package yo_fechas;
+
+import java.time.*;
+import java.time.chrono.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
+
+public class Fecha_7 {
+	// 7 Lee la fecha de nacimiento de una persona y calcula su edad.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		boolean validacion = false;
+		long edad;
+		DateTimeFormatter p = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		String fecha_holder;
+		LocalDate fecha_nac = null;
+		Scanner sc = new Scanner(System.in);
+		do {
+			System.out.println("Introduce tu fecha de nacimiento (Año-mes-día)");
+			fecha_holder = sc.nextLine();
+			try {
+				fecha_nac = LocalDate.parse(fecha_holder);
+				if (fecha_nac.isAfter(LocalDate.now())) {
+					System.out.println("No se haga el chistoso");
+					validacion = false;
+				} else
+					validacion = true;
+			} catch (DateTimeParseException a) {
+				System.out.println("Lo siento algo salio mal(Formato incorrecto) vuelva a introducir su fecha de nacimiento");
+				validacion = false;
+			}
+		} while (validacion);
+		edad = ChronoUnit.YEARS.between(fecha_nac, LocalDate.now());
+		System.out.println("Su fecha de nacimiento " + fecha_nac.format(p) + "\n" + "Su edad actual " + edad);
+	}
+}

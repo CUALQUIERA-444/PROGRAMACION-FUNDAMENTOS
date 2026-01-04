@@ -1,0 +1,26 @@
+package práctica7;
+
+import java.util.Scanner;
+
+public class Ejercicio3_Práctica7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num; 
+		int factorial = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce un numero y te calculamos su factorial");	
+		num = sc.nextInt();
+		if ( num > 0 )
+			factorial = total_factorial(num);
+		System.out.println(factorial);
+}
+	public static int total_factorial(int f) {
+		int i;
+		int acumulador = 1; 
+		for ( i = 1 ; i <= f ; i++) {
+			acumulador = acumulador * i;
+		}		
+		return acumulador;
+	}
+}

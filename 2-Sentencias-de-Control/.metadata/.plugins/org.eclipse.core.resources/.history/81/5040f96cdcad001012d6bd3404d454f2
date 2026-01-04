@@ -1,0 +1,44 @@
+package práctica6;
+
+import java.util.Scanner;
+
+public class Ejercicio5_Práctica6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	int numero_sala;
+	int numero_entradas;
+	int sala1 = 0;
+	int sala2 = 0;
+	int contador_10 = 0;
+	int guardado_10 = 0;
+	int entradas_total = 0;
+	Scanner sc= new Scanner (System.in);
+	do {
+		System.out.println("Introduzca el numero de sala (0/1 o 2)");
+		numero_sala = sc.nextInt();
+		if (numero_sala == 1 || numero_sala ==2 && numero_sala !=0) {
+		System.out.println("Introduzca el número de entradas que ha comprado");
+		numero_entradas = sc.nextInt();
+		guardado_10 = numero_entradas;
+		if ( numero_sala == 1)
+			sala1 += numero_entradas;
+		else 
+			sala2 += numero_entradas;
+			
+		entradas_total = sala1 + sala2;
+		}
+		if ( guardado_10 > 10) {
+			contador_10++;
+		}
+	}
+	while (numero_sala >=1 && numero_sala <=2 && numero_sala !=0);
+	if (sala1 > sala2)
+		System.out.println("La sala que mas entradas ha vendido es la sala"+" "+numero_sala);
+	else 
+		System.out.println("La sala que mas entradas ha vendido es la sala"+" "+numero_sala);
+	System.out.println("Ha vendido un total de"+" "+entradas_total);
+	System.out.println("Ha habido un total de"+" "+contador_10+" "+"personas que compraron más de 10 entradas");
+	System.out.println("La sala introducida es la cero fin del programa");	
+	}
+}

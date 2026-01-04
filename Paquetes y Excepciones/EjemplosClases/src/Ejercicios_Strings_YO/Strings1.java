@@ -1,0 +1,22 @@
+package Ejercicios_Strings_YO;
+
+import java.util.Scanner;
+
+public class Strings1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String cadena;
+		String c_mayor;
+		do {
+			System.out.println("Introduce una cadena");
+			cadena = sc.nextLine();
+			c_mayor = cadena.toUpperCase();
+			if(cadena.equalsIgnoreCase("Fin")== true)
+				break;
+			System.out.println("Su cadena en mayúsculas"+" "+c_mayor);
+		} while (cadena.equalsIgnoreCase("fin") == false);
+		System.out.println("Fin del programa");
+	}
+}

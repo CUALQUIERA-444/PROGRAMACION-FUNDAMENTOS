@@ -1,0 +1,40 @@
+package práctica7;
+
+import java.util.Scanner;
+
+public class Ejercicio4_Práctica7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num;
+		char empezar;
+		char seguir = ' ';
+		int factorial = 0; 
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Para empezar introduzca(E o e)");
+		empezar = sc.nextLine().charAt(0);
+		while ( empezar == 'e' || empezar == 'E' && seguir == 's' || seguir == 'S') { 
+		System.out.println("Introduce un número y te devolvemos el factorial");
+		num = sc.nextInt();
+		if ( num > 0)
+			factorial = total_factorial(num);
+			System.out.println(factorial);
+		System.out.println("Desea Continuar? (Introduzca s o S para seguir) (Si desea terminar introduzca F o f )");
+		sc.nextLine();
+		seguir = sc.nextLine().charAt(0);
+		if ( seguir == 'F' || seguir == 'f') {
+			System.out.println("Fin del programa");
+			System.exit(0);
+		}
+		}
+	}
+		public static int total_factorial(int f) {
+			int i;
+			int acumulador = 1; 
+			for ( i = 1 ; i <= f ; i++) {
+				acumulador = acumulador * i;
+			}		
+			return acumulador;
+		}
+	}
+

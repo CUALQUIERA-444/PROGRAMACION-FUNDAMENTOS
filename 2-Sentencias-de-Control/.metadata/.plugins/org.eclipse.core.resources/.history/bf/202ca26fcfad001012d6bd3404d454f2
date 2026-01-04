@@ -1,0 +1,50 @@
+package práctica6;
+
+import java.util.Scanner;
+
+public class Alternative4_Práctica6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	final double normal_adultos = 3 , reducida_adultos = 2, normal_niños = 2,reducida_niños = 1.2;
+	int niños;
+	int adultos;
+	double recaudación = 0;
+	double totalgrupo = 0;//Si se pone la misma variable no funciona por la suma de las 2 variables al mismo tiempo
+	boolean discapacidad;
+	int máximo = 0;
+	int entradas;
+	double total = 0;
+	Scanner sc = new Scanner(System.in);
+	do { //Recogemos los datos
+		System.out.println("Introduce la cantidad total de adultos");
+		adultos = sc.nextInt();
+		System.out.println("Introduce la cantidad total de niños");
+		niños = sc.nextInt();
+		entradas = adultos + niños;
+		System.out.println("Tiene discapacidad?(true/false)");
+		discapacidad = sc.nextBoolean();
+		//Si tiene discapacidad se aplica el descuento
+		if ( discapacidad ) { //Se aplica la tarifa si se introduce true
+			totalgrupo = reducida_adultos*adultos+reducida_niños*niños;
+			System.out.println("Tienes que pagar "+totalgrupo+"€");
+	}
+		// Si no no se le aplica nada
+		else  {
+			totalgrupo= normal_adultos*adultos + normal_niños*niños; 
+			System.out.println("Tienes que pagar "+totalgrupo+"€");
+		}
+			total+= totalgrupo; //Guardamos el valor de cada lectura y lo vamos sumando .
+			 //Sirve para ir acumulando la suma de ambos grupos con otros datos que nos puedan introducir despues
+								//Y en caso de que alguno de los datos de la suma no varien y se reinicie
+			System.out.println("El total entre ambos grupos por ahora es "+total+"€");
+			entradas+= totalgrupo;
+			if ( entradas > máximo) // Si entradas es mayor que max 
+			máximo = entradas; //Máximo pasa a ser las entradas y cada vez que algo sea mayor que este dato
+							   //Este coge dicho valor
+	} 
+	while ( total <= 100);
+	System.out.println("El grupo que ha recaudado más entradas ha recaudado un total de:"+máximo);
+	System.out.println("Se han recuadado más de 100 euros(FIN DEL PROGRAMA)");
+	}
+}

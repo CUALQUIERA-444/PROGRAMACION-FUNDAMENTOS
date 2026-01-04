@@ -1,0 +1,9 @@
+package ExamenExcepciones;
+
+public class MenorEdadExcepcion {
+
+	public MenorEdadExcepcion() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,17 @@
+package Soluciones_TODO;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
+import java.util.Locale;
+
+public class ejercicio1 {
+	public static void main(String st[]) {
+		LocalDate hoy=LocalDate.now();
+		System.out.println(hoy);
+		DateTimeFormatter patron=DateTimeFormatter.ofPattern("dd MM yy");
+		System.out.println(patron.format(hoy));
+		System.out.println("Día de la semana:"+hoy.getDayOfWeek().getDisplayName(TextStyle.FULL,Locale.getDefault()));
+	}
+
+}

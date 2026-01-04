@@ -1,0 +1,34 @@
+package yo_fechas;
+import java.util.Scanner;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.time.*;
+public class Fecha_3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*Leer una fecha por teclado (día, mes y año) y calcular la nueva fecha
+		transcurridos un numero de días anotado por teclado.
+		*/
+		Scanner sc = new Scanner(System.in);
+		DateTimeFormatter pat;
+		pat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		String fecha = "";
+		boolean valid = false;
+		LocalDate conversion = null;
+		do {
+		try {
+		System.out.println("Introduce una fecha");
+		fecha = sc.nextLine();
+		conversion = LocalDate.parse(fecha);
+		valid = true;
+		}
+		catch (DateTimeParseException e) {
+		System.out.println("Introduzca una fecha válida");
+		}
+		}
+		while(valid == false);
+		System.out.println(pat.format(conversion));
+	}
+}

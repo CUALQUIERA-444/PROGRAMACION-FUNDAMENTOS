@@ -1,0 +1,23 @@
+package Excepciones_YO;
+
+import java.util.Scanner;
+
+public class Excepciones4 {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		 * 4. Modifica la función que valida el DNI para que dé error si los primeros
+		caracteres no son dígitos usando NumberFormatException.
+		 */
+		
+		//Pedimos el DNI 
+		
+		String DNI;
+		String regex = "^[0-9]{8}";
+		System.out.println("INTRODUCE TU DNI (FORMATO 8 DIGITOS Y UNA LETRA");
+		DNI = sc.nextLine();
+		if (DNI.matches(regex))
+			System.out.println("cualquiera");
+}
+}

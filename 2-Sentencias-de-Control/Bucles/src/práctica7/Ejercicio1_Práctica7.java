@@ -1,0 +1,43 @@
+package práctica7;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Ejercicio1_Práctica7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int numero_emple;
+		float sueldo;
+		float precio_horas_extra;
+		int horas_extra;
+		float otros_ingresos;
+		float  sueldo_final;
+		Scanner sc = new Scanner (System.in);
+		sc.useLocale(Locale.ENGLISH);
+		do {
+			System.out.println("Introduce número de empleado");
+			numero_emple = sc.nextInt();
+			if ( numero_emple != 0) {
+			System.out.println("Introduzca su salario mensual");
+			sueldo = sc.nextFloat();
+			System.out.println("Introduzca cuantas horas extra trabaja");
+			horas_extra = sc.nextInt();
+			System.out.println("Introduzca su salario por hora extra");
+			precio_horas_extra = sc.nextFloat();
+			System.out.println("Introduzca cuanto recibe en base a otros ingresos");
+			otros_ingresos = sc.nextFloat();
+			sueldo_final = calcularSalario(sueldo,horas_extra,precio_horas_extra,otros_ingresos);
+			if (sueldo_final > 600) 
+			System.out.println(numero_emple+" "+sueldo_final+"€");
+			}
+			} 
+			while ( numero_emple !=0);
+			System.out.println("Fin del programa");
+	}
+	public static float calcularSalario( float s, int h, float h_extra,float otros) {
+						float sueldo_f;
+						sueldo_f = s + h * h_extra + otros;
+						return sueldo_f;
+	}
+}

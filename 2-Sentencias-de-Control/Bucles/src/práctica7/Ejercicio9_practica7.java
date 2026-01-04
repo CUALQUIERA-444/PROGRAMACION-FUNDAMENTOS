@@ -1,0 +1,19 @@
+package práctica7;
+
+public class Ejercicio9_practica7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int numero = 5;
+		ImpresióndeSumas(numero);
+	}
+	public static void ImpresióndeSumas(int a) {
+		for ( int i = 1; i <=a ; i++) {
+			for ( int j = 1; j<=i; j++) {
+			int operación = i * 1;
+			System.out.print(operación);
+	}
+			System.out.println("");
+		}
+	}
+}

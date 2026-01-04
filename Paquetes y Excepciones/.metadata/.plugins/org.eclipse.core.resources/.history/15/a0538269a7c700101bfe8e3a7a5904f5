@@ -1,0 +1,32 @@
+package Ejercicios_Strings_YO;
+
+import java.util.Scanner;
+
+public class Strings4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Paso 1 pedir el DNI
+		String DNI;
+		Scanner sc = new Scanner(System.in);
+		do {
+		System.out.println("Introduce tu DNI");
+		DNI = sc.nextLine();
+		DNI = Validar_DNI(DNI);
+		}
+		while(DNI.equals("error"));
+		System.out.println(DNI);
+	}
+	public static String Validar_DNI(String DNI) {
+		if(DNI.length() == 9) {
+			System.out.println("Entra");
+			String regex = "^[O-9]+$";
+			if (DNI.matches(regex)) {
+				System.out.println("Entra");
+				return DNI;
+		}
+	}
+	return "error";
+}
+	
+}

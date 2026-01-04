@@ -1,0 +1,37 @@
+package yo_fechas;
+import java.util.Scanner;
+import java.time.*;
+public class Fecha_3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*Leer una fecha por teclado (día, mes y año) y calcular la nueva fecha
+		transcurridos un numero de días anotado por teclado.
+		*/ 
+	    int día;
+	    int mes; 
+	    int año;
+	    int n_dias;
+	    boolean validacion = true;
+	    Scanner sc = new Scanner (System.in);
+	    do {
+	    System.out.println("Introduce el día que le interese");
+	    día = sc.nextInt();
+	    System.out.println("Introduce el mes que le interese");
+	    mes = sc.nextInt();
+	    System.out.println("Introduce el año que le interese");
+	    año = sc.nextInt();
+	    System.out.println("Introduce el numero de días que le interese");
+	    n_dias= sc.nextInt();
+	    try {
+	    LocalDate fecha_aumentada = LocalDate.of(año,mes,día).plusDays(n_dias);
+	    System.out.println(fecha_aumentada);
+	    }
+	    catch(DateTimeException e)  {
+	    System.out.println("Introduzca una fecha válida");
+	    validacion = false;
+	    }
+	    }
+	    while (validacion == false);
+	}
+}

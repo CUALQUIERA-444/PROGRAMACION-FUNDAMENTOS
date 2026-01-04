@@ -1,0 +1,27 @@
+package PrácticaArrays;
+
+import java.util.Scanner;
+
+public class Array2 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*Leed 10 números en un array. Una vez leídos todos recorred el array y mostrad los
+		que son pares, recorredlo de nuevo para mostrar los impares.
+		*/
+		Scanner sc = new Scanner (System.in);
+		int pares[] = new int[5];
+		for  ( int i = 0; i <pares.length; i++) {
+		System.out.println("Introduce el número para ir rellenando el array");
+		pares[i] = sc.nextInt();
+		if ( pares[i] % 2 == 0)
+		System.out.println("pares "+pares[i]);
+		}
+		int impares[] = new int [5];
+		for ( int j = 0; j<impares.length; j++) {
+			System.out.println("Introduce el número para ir rellenando el array");
+			pares[j] = sc.nextInt();
+			if ( impares[j] % 2 != 0) 
+				System.out.println("impares"+impares[j]);
+		}
+	}
+}

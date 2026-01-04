@@ -1,0 +1,32 @@
+package Ejercicios_Strings_YO;
+
+import java.util.Scanner;
+
+public class Strings2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/* Nota todavia no sabemos validar si son europeas 
+		 * Sin hacer una condición excesivamente larga asi que 
+		 * cualquier cosa nos sirve MENOS NUMEROS
+		 */
+		Scanner sc = new Scanner(System.in);
+		String ciudad_europea;
+		char letra;
+		int contador = 0;
+		String continuar = "Si";
+		System.out.println("Introduce una letra(Se validará para el siguiente apartado");
+		letra = sc.nextLine().charAt(0); 
+		char letra_m = Character.toUpperCase(letra);
+		while (continuar.equalsIgnoreCase(continuar) == true && continuar.equalsIgnoreCase("No") == false  ) {
+		System.out.println("Introduce una ciudad europea");
+		ciudad_europea = sc.nextLine();
+		char comparar = ciudad_europea.charAt(0);
+		if (letra_m == comparar)
+		contador++;
+		System.out.println("Desea continuar?");
+		continuar = sc.nextLine();
+	}
+		System.out.println("En total las que empiezan por la letra"+" "+letra+" "+"son"+ " "+ contador);
+	}
+}

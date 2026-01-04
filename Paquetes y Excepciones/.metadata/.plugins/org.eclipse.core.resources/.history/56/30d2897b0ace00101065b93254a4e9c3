@@ -1,0 +1,18 @@
+package yo_fechas;
+import java.time.*;
+import java.time.chrono.*;
+import java.time.temporal.ChronoUnit;
+public class Fecha_prueba {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LocalDateTime h = LocalDateTime.now().plusMinutes(1);
+		long segundo = 1;
+		long alarma = ChronoUnit.SECONDS.between(LocalDateTime.now(),h); // cronometro
+		while (LocalDateTime.now().isBefore(h))
+			segundo++;
+			System.out.println("Alarma "+(alarma-segundo));
+		//FUNCIONA :)
+		
+	}
+}

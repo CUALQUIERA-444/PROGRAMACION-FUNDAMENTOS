@@ -1,0 +1,46 @@
+package práctica7;
+
+import java.util.Scanner;
+
+public class Ejercicio6_Práctica7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Programa que lee fechas en formato DD (1 al 31), mm(1 a 12) y aa (4 dígitos y obtiene
+		//el número de orden del día en el total del año
+		// Ejemplo
+			// 3 de Febrero día 34
+		// Leer tantas fechas como el usuario quiera, utilizar un método que recibe dd, mm, aa y 
+		// retorna un entero 
+		/*PISTA;
+		Una función entera para Pasar el mes y el año 
+		public static int diasMes( int mes, int año ) {
+		dias Mes (2022) -> 31
+		diasMes (4, 2023) ->3
+		diasMes (2,2024) -> 29
+		diasMes (2,2025) -> 28
+
+		13 mayo 
+		diasMes(1,2025) -> 31
+		diasMes (2,2025) -> 28
+		diasMes(3,2025)-> 31
+		diasMes(4.2025) -> 30
+				  120 + 13 = 133;
+		Aparte de la función que calcula las fechas.
+		*/
+		// Cuando decimos el año 4 digitos se refiere a algo como (2025,2024)...
+		// CONTAR LOS DIAS SE REFIERE A CONTAR DESDE EL 1 de enero hasta ese día
+		int dia;
+		int mes;
+		int año;
+		boolean seguir;
+		Scanner sc = new Scanner (System.in);
+		do {
+		System.out.println("Introduce el día de (1 al 31");
+		dia = sc.nextInt();
+		if ( dia >= 1 && dia <= 31)
+			System.out.println(dia);
+		}
+		while ( dia >= 1 && dia <= 31);
+	}
+}

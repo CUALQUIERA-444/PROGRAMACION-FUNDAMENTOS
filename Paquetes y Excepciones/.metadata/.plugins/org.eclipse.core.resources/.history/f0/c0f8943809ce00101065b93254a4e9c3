@@ -1,0 +1,11 @@
+package yo_fechas;
+import java.time.*;
+public class Fecha_prueba {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LocalDateTime h = LocalDateTime.now().plusSeconds(1);
+		while (LocalDateTime.now().isBefore(h))
+			System.out.println("pene");
+	}
+}

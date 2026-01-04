@@ -1,0 +1,83 @@
+package yo_fechas;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+public class Fecha_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner (System.in);
+		boolean continuar = true;
+		//2 Leer 2 fechas de teclado (día, mes y año) 
+		//Ordenar de menor a mayor.
+		
+		//Datos separados pedimos cada dato (Día,mes y año) separados
+		int dia; 
+		int mes;
+		int año;
+		LocalDate fechas_separadas;
+		//Se intenta validar 
+		do {
+		try {
+		System.out.println("Introduce el día");
+		dia = sc.nextInt();
+		System.out.println("Introduce el mes");
+		mes = sc.nextInt();
+		System.out.println("Introduce el año");
+		año = sc.nextInt();
+		continuar = true;
+		}
+		catch (InputMismatchException e) {
+			System.out.println("Introduzca números válidos");
+			continuar = false;
+		}
+		try 
+			fechas_separadas = LocalDate.of(dia, mes, año);
+		while (continuar == false);
+		//Sin patrón validando 
+		
+		String String1;
+		String String2; 
+		LocalDate fecha1 = null;
+		LocalDate fecha2 = null;
+		//Pedir 2 fechas 
+		
+		//Convertir de Strings a Fechas y guardar en variables 
+		//Manejar excepciones para realizar el parseo 
+		//Este formato solo funciona con el yyyy-MM-dd
+		do {
+		try {
+			System.out.println("Introduce una fecha");
+			String1 = sc.nextLine();
+			System.out.println("Introduce otra fecha");
+			String2 = sc.nextLine();
+		fecha1= LocalDate.parse(String1);
+		 fecha2 = LocalDate.parse(String2);
+		continuar = true;
+		}
+		catch( DateTimeParseException e ) {
+			System.out.println("Error introduzca datos válidos para una fecha");
+			continuar = false;
+		}
+		}
+		while (continuar == false);
+		//Hacer las comparaciones entre 1 y otra 
+		
+		if (fecha1.isBefore(fecha2)) {
+			System.out.println(fecha1);
+			System.out.println(fecha2);
+		}
+		else if (fecha1.isBefore(fecha2)) {
+			System.out.println(fecha2);
+			System.out.println(fecha1);
+		}
+		else 
+		System.out.println("Son iguales");	
+		//Validar ambas fechas para ordenarlas 
+		
+		//Con patrón validando
+	
+	}
+}

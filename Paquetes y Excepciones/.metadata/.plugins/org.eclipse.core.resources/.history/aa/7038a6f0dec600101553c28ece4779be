@@ -1,0 +1,17 @@
+package Ejercicios_Strings_YO;
+
+import java.util.Scanner;
+
+public class Strings1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String cadena;
+		do {
+		System.out.println("Introduce una cadena");
+		cadena = sc.nextLine();
+		}
+		while(cadena.equalsIgnoreCase("fin") == false);
+	}
+}

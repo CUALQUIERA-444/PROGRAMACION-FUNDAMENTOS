@@ -1,0 +1,81 @@
+package ClaseString;
+
+public class ejemplo1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String cadena="Hola";
+		String cadena2="Vamonos";
+		String cadena3 = "vamonos";
+		int cont = 0;
+		//String cadena=new String("Esta es una cadena");
+		String resultado="";
+		/*
+		System.out.println("Valor de resultado:"+resultado);
+		
+		System.out.println("Mi cadena:"+cadena);
+		resultado=cadena.toUpperCase();
+		System.out.println(resultado);
+		System.out.println("La cadena original es:"+cadena);
+		System.out.println("La longitud de la cadena es:"+ cadena.length());
+		resultado = cadena + " estoy concatenando cadenas";
+		System.out.println(resultado);
+		*/
+		String resultado2= "";
+		String hola; // Su valor es null
+		String todo = cadena + resultado2; //Concatenación 
+		// System.out.println(hola); //NO
+		System.out.println(todo);
+		System.out.println("El tamaño de cadena 2 es:"+cadena2.length());
+		if ( cadena.equals(cadena2)) //cadena2.equals(cadena)
+			System.out.println("cadena y cadena2 tienen el mismo valor");
+		//Devuelve boolean 
+		int r= cadena.compareTo(cadena2); //Si da negativo esta por delante en el diccionario 
+										  // Positivo si va despues de la cadena.
+										// Devuelve 0 si son identicas.
+		System.out.println(r);
+		r = cadena2.compareTo(cadena);	
+		System.out.println(r);
+		r = cadena2.compareTo(cadena3);
+		System.out.println(r);
+		r = cadena2.compareToIgnoreCase(cadena3);
+		System.out.println(r);
+		System.out.println("Substring:"+cadena2.substring(2,6));
+		System.out.println(cadena2.charAt(2));
+		
+	for (int i = 0; i < cadena2.length();i++)
+		if(cadena2.charAt(1) == 'o')
+		cont++;
+System.out.println("La cadena tiene "+cont+" + oes");		
+		System.out.print(cadena2.charAt(i));
+	//Substring empieza contar en 0 P 0 e 1 p 2 i 3 t 4 o 5
+	// String r;
+     // r = s.substring (0,3) ("pru"); Excluye el 3 en adelante
+	 // r = s.substring (4,7) No te puedes salir de los limites de la cadena 
+	/*	if (cadena.equalsIgnoreCase(cadena2))
+			System.out.println("Son iguales");
+		else
+			System.out.println("Son distintas");
+		
+		if (cadena.equals("FIN")) // "FIN".equals(cadena)
+			System.out.println("En la cadena pone fin");
+		else
+			System.out.println("En la cadena no pone fin");
+		
+		int num=cadena.compareToIgnoreCase(cadena2);
+		System.out.println("Al comparar, compareTo me devuelve:"+num);
+		if (num==0)
+			System.out.println("son iguales");
+		else
+			if (num<0)
+				System.out.println(cadena + " va antes que "+ cadena2);
+			else
+				System.out.println(cadena2 + " va antes que "+ cadena);
+		
+		resultado=cadena2.substring(3, 6);
+		
+		System.out.println("Resultado de substring:"+resultado);
+	*/
+	}
+
+}

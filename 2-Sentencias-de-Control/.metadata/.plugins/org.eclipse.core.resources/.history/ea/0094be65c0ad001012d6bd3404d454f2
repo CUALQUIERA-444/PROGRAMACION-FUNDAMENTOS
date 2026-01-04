@@ -1,0 +1,52 @@
+package práctica6;
+
+import java.util.Scanner;
+
+public class Alternative4_Práctica6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	final double normal_adultos = 3 , reducida_adultos = 2, normal_niños = 2,reducida_niños = 1.2;
+	int adultos;
+	int niños;
+	double recaudación;
+	boolean discapacidad = true;
+	int acumulador_Nentradas = 0;
+	int acumulador_Aentradas = 0;
+	double precio_adultos = 0;
+	double precio_niños = 0;
+	Scanner sc = new Scanner (System.in);
+	do { // Hacer esto mientras (While)
+	System.out.println("Anota los adultos del grupo actual"); // Pedimos la cantidad de adultos y los guardamos
+	adultos = sc.nextInt();
+	System.out.println("Tiene alguna discapacidad(true/false)"); // Verificamos si tiene alguna discapacidad
+	discapacidad = sc.nextBoolean();
+	if ( discapacidad)   {
+		precio_adultos = precio_adultos + adultos * reducida_adultos; //Calculamos el importe total reducido para adultos y lo mostramos
+		System.out.println(precio_adultos);
+	}
+	else {
+		precio_adultos = precio_adultos + adultos  * normal_adultos;// Si es falso calculamos el precio normal para adultos y lo mostramos
+	    System.out.println(precio_adultos);
+	}
+	System.out.println("Anota los niños del grupo actual"); // Pedimos la cantidad de niños y los guardamos
+	niños = sc.nextInt();
+	System.out.println("Tiene alguna discapacidad(true/false)"); // Verificamos si tiene alguna discapacidad
+	discapacidad = sc.nextBoolean();
+	if ( discapacidad) {
+		precio_niños = precio_niños + niños * reducida_niños; //Calculamos el importe total reducido para niños y lo mostramos
+		System.out.println(precio_niños);
+	}
+	else {
+		precio_niños = precio_niños + niños  * normal_niños; // Si es falso calculamos el precio normal para niños y lo mostramos
+		System.out.println(precio_niños);
+	}
+	recaudación = precio_niños + precio_adultos;
+	System.out.println(recaudación);
+	}
+	// Sin embargo al reinciar se pierde todo y yo no quiero eso  y ademas si el precio de
+	// los adultos o los niños es superior a 100 el programa debe cerrar
+	//Necesito guardar los datos anteriores sin perderlos 
+	while ( recaudación <= 100 ); // Esto se ejecutara mientras la suma sea menor o igual que 100
+	}
+}

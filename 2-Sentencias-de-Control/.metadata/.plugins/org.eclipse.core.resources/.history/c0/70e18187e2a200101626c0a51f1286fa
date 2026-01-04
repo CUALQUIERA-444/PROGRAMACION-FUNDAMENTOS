@@ -1,0 +1,47 @@
+package práctica5;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Ejericicio9_práctica5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int alumnos = 0;
+		int contador = 0;
+		int contador_18 = 0;
+		int contador_altura = 0;
+		int contador_edad = 0;
+		int acumulador_1 = 0;
+		int acumulador_2 = 0;
+		int edad;
+		int edad_media;
+		double estatura;
+		int contador_estatura = 0;
+		double estatura_media;
+		Scanner sc = new Scanner (System.in);
+		sc.useLocale(Locale.ENGLISH);
+		while (alumnos < 5) {
+			System.out.println("Introduce tu edad");
+			edad = sc.nextInt();
+			contador_edad++;
+			acumulador_1 = acumulador_1 + edad;
+			System.out.println("Introduce tu altura");
+			estatura= sc.nextDouble();
+			contador_estatura++;
+			acumulador_2 = acumulador_2 + edad;
+			if ( edad > 18)
+				contador_18++;
+			else if ( estatura > 1.75)
+				contador_altura++;
+			alumnos++;
+		}
+		edad_media = acumulador_1 / contador_edad;
+		estatura_media = acumulador_2 / contador_estatura;
+		System.out.println("La edad media de los alumnos es"+" "+edad_media);
+		System.out.println("La estatura media de los alumnos es"+" "+estatura_media);
+		System.out.println("La cantidad de alumnos mayores de 18 años es"+" "+contador_18);
+		System.out.println("La cantidad de alumos que miden mas de 1.75 es"+" "+contador_altura);
+	}
+
+}

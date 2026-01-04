@@ -1,0 +1,50 @@
+package práctica6;
+
+import java.util.Scanner;
+
+public class Ejercicio4_Práctica6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//El programa termina cuando se hayan recaudado mas de 100 euros
+		final double Normal_Adultos = 3,Normal_Niños = 2,Reducida_Adultos = 2,Reducida_Niños = 1.2;
+		//Simulador de compras de entradas en un museo por grupos
+		//Se anota el número de adults y niños y si se aplica tarifa reducida o no
+		//Usare un booleano
+		int adultos;
+		int niños;
+		double recaudación ;
+		boolean discapacidad = true; // puede ser que al final del do no tenga valor
+		double acumulador_adultos = 0;
+		double acumulador_niños = 0;
+		Scanner sc = new Scanner (System.in);
+		do {
+		System.out.println("Anota cuantos adultos van a entrar al museo");
+		adultos = sc.nextInt();
+		System.out.println("Tiene discapacidad? Introduzca (true or false)");
+		discapacidad = sc.nextBoolean();
+		if ( discapacidad == true  ) {
+			acumulador_adultos = Reducida_Adultos * adultos+ acumulador_adultos;
+			System.out.println(acumulador_adultos);
+		}
+		else {
+			acumulador_adultos = Normal_Adultos * adultos + acumulador_adultos;
+			System.out.println(acumulador_adultos);
+		}
+		System.out.println("Anota cuantos niños van a entrar al museo");
+		niños = sc.nextInt();
+		System.out.println("Tiene discapacidad? Introduzca (true or false)");
+		discapacidad = sc.nextBoolean();
+		if ( discapacidad == true  ) {
+			acumulador_niños = Reducida_Niños * niños + acumulador_niños;
+			System.out.println(acumulador_niños);
+		}
+		else {
+			acumulador_adultos = Normal_Niños * niños + acumulador_niños;
+			System.out.println(acumulador_niños);
+		}
+		recaudación = acumulador_niños + acumulador_adultos;
+		}
+		while (recaudación <= 100);
+	}
+}

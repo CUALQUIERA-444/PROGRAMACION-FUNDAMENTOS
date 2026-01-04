@@ -1,0 +1,27 @@
+package PrácticaArrays;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Array4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		 * Programa que lee 5 nombres de personas. Introducirlos en un array y ordenarlos
+	alfabéticamente (usar método sort de la clase Arrays). Llevad otro array con el
+	número de ventas de cada uno de ellos, inicialmente cero. Comprobar si otro
+	nombre introducido después se encuentra entre esos 5.
+		 */
+		//Declarar array y rellenarlo 
+		Scanner sc = new Scanner (System.in);
+		String nombres[] = new String[5];
+		for (int i = 0; i<nombres.length; i++) {
+		System.out.println("Introduce nombres de personas para rellenarlos en el array");
+		nombres[i] = sc.nextLine();
+		}
+		Arrays.sort(nombres); //Ordenar Strings/Nombres
+		System.out.println("Nombres ordenados "+nombres[5]);
+	}
+
+}

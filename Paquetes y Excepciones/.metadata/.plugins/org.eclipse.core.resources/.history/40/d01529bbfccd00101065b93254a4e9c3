@@ -1,0 +1,10 @@
+package yo_fechas;
+
+public class Fecha_7 {
+   //7 Lee la fecha de nacimiento de una persona y calcula su edad.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
