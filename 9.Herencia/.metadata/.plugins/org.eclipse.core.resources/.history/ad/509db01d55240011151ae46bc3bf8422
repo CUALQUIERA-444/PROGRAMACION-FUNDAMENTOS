@@ -1,0 +1,15 @@
+package Ejemplo2;
+
+public class CursoPuente extends Alumno{
+     private String carrera_procedencia;
+	public CursoPuente(String nombre, String apellidos, String curso, double importeMatricula,String carrera_procedencia) {
+		super(nombre, apellidos, curso, importeMatricula);
+		this.carrera_procedencia = carrera_procedencia;
+	}
+	@Override
+	public String toString() {
+		return "CursoPuente [carrera_procedencia=" + carrera_procedencia + ", toString()=" + super.toString()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+	}	
+	
+}

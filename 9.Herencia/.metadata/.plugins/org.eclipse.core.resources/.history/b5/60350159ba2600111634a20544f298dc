@@ -1,0 +1,31 @@
+package Ejemplo1;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Libreria {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc = new Scanner (System.in);
+   System.out.println("Introduce un libro ");
+   ArrayList<Libro> libreria = new ArrayList<>();
+   libreria.add(new Libro("El hobbit","J R. Tolkien","Alfaguara",30));
+   libreria.add(new LibroTexto("Programación","Félix Gomez","Mac Grawn",38,"DAW1",10));
+   
+   Iterator<Libro> it=libreria.iterator();
+  
+   while(it.hasNext()) {
+	   Libro l = it.next();
+	   System.out.println(l);
+   }
+   System.out.println("Anota precio");
+   double precio = sc.nextDouble();
+   
+   for(Libro l : libreria) {
+	   if(l.getPrecio()<precio) 
+		   System.out.println(l);
+   }
+	}
+}

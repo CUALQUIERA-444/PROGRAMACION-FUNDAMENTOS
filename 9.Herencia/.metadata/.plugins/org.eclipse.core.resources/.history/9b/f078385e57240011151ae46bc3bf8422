@@ -1,0 +1,17 @@
+package Ejemplo2;
+
+public class Alumno {
+ private String nombre,apellidos,curso;
+ protected double importeMatricula;
+ public Alumno(String nombre, String apellidos, String curso, double importeMatricula) {
+	this.nombre = nombre;
+	this.apellidos = apellidos;
+	this.curso = curso;
+	this.importeMatricula = importeMatricula;
+ }
+ @Override
+ public String toString() { //Sobreescirbir metodo
+	return  "Alumno"  + nombre + "," + apellidos + ","+ curso + "," + importeMatricula;
+}
+}
+

@@ -20,5 +20,6 @@ public class Ejericicio8_práctica5 {
 			contador_salario++;
 	}
 		System.out.println(contador_salario);
+		System.out.println(2*1000/10);
 }
 }

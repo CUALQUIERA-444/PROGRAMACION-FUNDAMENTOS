@@ -1,9 +1,7 @@
-INDEX VERSION 1.134+/home/antonioad/Desktop/Programación/Examenes/.metadata/.plugins/org.eclipse.jdt.core
-2125791268.index
-2046056091.index
-2957072804.index
+INDEX VERSION 1.134+/home/cualquiera/ASIGNATURAS 1DAW/PROGRAMACION-FUNDAMENTOS/Examenes/.metadata/.plugins/org.eclipse.jdt.core
 3983233960.index
-3721496683.index
+1900482667.index
 1865797976.index
-2567467902.index
+2046056091.index
 1646699678.index
+3721496683.index

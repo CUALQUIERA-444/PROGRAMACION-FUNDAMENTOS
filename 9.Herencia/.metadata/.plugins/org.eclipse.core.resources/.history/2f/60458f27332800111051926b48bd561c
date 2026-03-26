@@ -1,0 +1,10 @@
+package letras;
+
+public class LetraI extends Letra{
+
+	public LetraI(char car char cad) {
+		// TODO Auto-generated constructor stub
+	super(car,'i');	
+	}
+	
+}

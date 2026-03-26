@@ -1,0 +1,18 @@
+package Ejemplo2;
+
+public class Alumno {
+ private String nombre,apellidos,curso;
+ private double importeMatricula;
+ public Alumno(String nombre, String apellidos, String curso, double importeMatricula) {
+	this.nombre = nombre;
+	this.apellidos = apellidos;
+	this.curso = curso;
+	this.importeMatricula = importeMatricula;
+ }
+ @Override //Sobreescribir Metodo
+ public String toString() {
+	return "Alumno [nombre=" + nombre + ", apellidos=" + apellidos + ", curso=" + curso + ", importeMatricula="
+			+ importeMatricula + "]";
+ }
+}
+
