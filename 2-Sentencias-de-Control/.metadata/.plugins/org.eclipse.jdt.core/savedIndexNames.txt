@@ -1,7 +1,4 @@
-INDEX VERSION 1.134+/home/cualquiera/ASIGNATURAS 1DAW/PROGRAMACION-FUNDAMENTOS/2-Sentencias-de-Control/.metadata/.plugins/org.eclipse.jdt.core
-1865797976.index
-1136377202.index
-1395177138.index
-3455741661.index
+INDEX VERSION 1.134+/home/cualquiera/Asignaturas1DAW/PROGRAMACION-FUNDAMENTOS/2-Sentencias-de-Control/.metadata/.plugins/org.eclipse.jdt.core
 2769879155.index
-1860405022.index
+1865797976.index
+1395177138.index

@@ -15,6 +15,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/cualquiera/Asignaturas1DAW/PROGRAMACION-FUNDAMENTOS/2-Sentencias-de-Control/EjerciciosDeSentenciasDeControl"/>
 			<item value="/home/cualquiera/ASIGNATURAS 1DAW/PROGRAMACION-FUNDAMENTOS/2-Sentencias-de-Control/Ejemplos"/>
 			<item value="/home/antonioad/Desktop/Programación/3.Clases.Java"/>
 		</list>
