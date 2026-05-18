@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module ArraysDeObjetos {
+	requires ClasesObjetos;
+}
