@@ -40,6 +40,7 @@ case 1:
 	String nombre;
 	Alumno nuevo;
 	int indice;
+	double n;
 	System.out.println("Introduce el nombre del alumno");
 	nombre = sc.nextLine();
 	nuevo = BuscarPorNombre(nombre,alumnos); 
@@ -47,7 +48,10 @@ case 1:
 		System.out.println("Ya esta matriculado");
 	}
 	else {
-		nuevo = new Alumno(nombre);
+		System.out.println("Introduce la nota del alumno");
+		n = sc.nextDouble();
+		sc.nextLine();
+		nuevo = new Alumno(n,nombre);
 		alumnos.add(nuevo); 
 		indice = alumnos.indexOf(nuevo);
 	System.out.println(alumnos.get(indice).toString());
@@ -64,6 +68,7 @@ case 2:
 	if(alumnos.contains(temporal)) {
 		System.out.println("Introduzca la nueva nota ");
 		nueva_nota = sc.nextDouble(); 
+		sc.nextLine();
 		indiceNota = alumnos.indexOf(temporal);
 		//alumnos.set(indiceNota, temporal) Cambia el objeto por completo no solo un dato 
 		temporal = alumnos.get(indiceNota);
@@ -79,15 +84,19 @@ break;
 case 3:
 	String reemplazo_V;
 	int indiceR;
+	double n_nueva;
 	String reemplazo_N;
 	System.out.println("Introduce el nombre de un alumno");
 	reemplazo_V = sc.nextLine();
 	Alumno conversion = new Alumno(reemplazo_V);
 	if(alumnos.contains(conversion)) { //No requiere fors
 		System.out.println("Introduce el nombre nuevo");
-		reemplazo_N = sc.nextLine(); 
+		reemplazo_N = sc.nextLine(); 	
+		System.out.println("Introduce la nota nueva");
+		n_nueva = sc.nextDouble();
+		sc.nextLine();
 		indiceR = alumnos.indexOf(conversion);//indice
-		conversion = new Alumno(0,reemplazo_N); //Apuntar al nuevo
+		conversion = new Alumno(n_nueva,reemplazo_N); //Apuntar al nuevo
 		alumnos.set(indiceR, conversion); //Reemplazo 
 		System.out.println(alumnos.get(indiceR).toString());
 	}
@@ -105,6 +114,7 @@ case 4:
 		while (it.hasNext()) {
 		Alumno real = it.next(); //Para recorrer la coleccion (necesario) para seguir
 		if(real.equals(reprimido)) { //Usa el equals para ver si el objeto es igual //NO USAR CONTAINS
+			//SOLO SE PUEDE INTERACTUAR CON EL RESULTADO DE IT UNA SOLA VEZ SIN GUARDARLO EN UNA VARIABLE TEMPORAL CASO CONTRARIO ES NECESARIO GUARDARLO EN UNA VARIABLE TEMPORAL 
 			it.remove();
 		}
 		}
@@ -114,7 +124,16 @@ case 4:
 		}
 break;
 case 5:
-	
+	String buscado;
+	System.out.println("Introduce el nombre del alumno a buscar");
+	buscado = sc.nextLine();
+	Alumno temp = new Alumno(buscado);
+	if(alumnos.contains(temp)){
+		System.out.println("El alumno fue encontrado");
+	}
+	else {
+		System.out.println("El alumno no fue encontrado");
+	}
 break;
 case 6:
 break;
@@ -123,6 +142,9 @@ default:
 break;
 }
 } while(opcion != 6);
+for (Alumno aux: alumnos) {
+	System.out.println(aux.toString());
+}
 System.out.println("Gracias por ejecutarme");
 	} 
 public static Alumno BuscarPorNombre(String nombre, ArrayList<Alumno>alumnos) {

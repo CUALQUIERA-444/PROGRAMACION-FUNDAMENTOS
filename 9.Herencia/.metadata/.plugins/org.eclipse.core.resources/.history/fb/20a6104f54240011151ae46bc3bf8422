@@ -1,9 +1,0 @@
-package Ejemplo2;
-
-public class CursoPuente {
-
-	public CursoPuente() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

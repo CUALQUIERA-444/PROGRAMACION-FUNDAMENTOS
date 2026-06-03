@@ -1,0 +1,4 @@
+Antonio,Aco,7.5,07/07/
+Kevin,Arriaga,8.2,09/02/2004
+Lucas,Castre,8.4,08/08/2008
+Javier,Castillo,4.5,07/06/2005

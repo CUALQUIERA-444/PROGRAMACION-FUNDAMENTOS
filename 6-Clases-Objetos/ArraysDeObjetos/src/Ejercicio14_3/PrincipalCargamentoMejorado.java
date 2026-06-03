@@ -36,7 +36,7 @@ public class PrincipalCargamentoMejorado {
 	String f_temporal;
 	double pc_Kilo;
 	double pv_Kilo;
-	CargamentoMejorado CargamentosM[] = null; //Valor temporal 
+	CargamentoMejorado CargamentosM[] = null; //Valor temporal Se puede poner siempre y cuando posteriormente se haga el new
 	int opc;
 	while (tamaño <= 0 || tamaño > 10) {
 		System.out.println("Introduzca con cuantos cargamentos quiere operar \"Numero entero\"");
@@ -156,7 +156,10 @@ public class PrincipalCargamentoMejorado {
 		//Esencialmente este metodo se encarga de sobreescribir las posiciones moviendo el contenido 
 		//Una casilla hacia atras 
 		int nueva_longitud = CargM.length;
-		for (int i = 0; i<nueva_longitud; i++) { //Al llegar al ultimo por borrar vale null lo que significa que ya no hay espacio pero como es null necesitamos un "escudo"
+		for (int i = 0; i<nueva_longitud; i++) { 
+			//La verificacion de los nulls se aplica en todos los objetos generalmente antes de usar un objeto
+			//Llamar a sus funciones o hacer algo con él
+			//Al llegar al ultimo por borrar vale null lo que significa que ya no hay espacio pero como es null necesitamos un "escudo"
 			if(CargM[i] != null) { //Salta una excepcion si solo queda un cargamento por lo que es esencial comprobar que el ultimo no este vacio si lo esta se va
 			if(CargM[i].getN_Kilos() == 0) {
 					for(int j = i;j < nueva_longitud-1; j++) {

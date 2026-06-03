@@ -1,9 +1,0 @@
-package Ejemplo2;
-
-public class Extranjero {
-
-	public Extranjero() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

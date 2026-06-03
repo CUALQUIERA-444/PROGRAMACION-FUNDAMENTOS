@@ -1,0 +1,1 @@
+Alumno [nombre=Lucas, apellido=Castre, nota=8.4, fecha_nacimiento=2008-08-08]Alumno [nombre=Kevin, apellido=Arriaga, nota=8.2, fecha_nacimiento=2004-02-09]Alumno [nombre=Javier, apellido=Castillo, nota=4.5, fecha_nacimiento=2005-06-07]

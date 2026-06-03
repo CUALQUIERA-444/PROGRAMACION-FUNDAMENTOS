@@ -32,14 +32,15 @@ public class AEjemplosPath {
 	
 	public static void infoPath(Path p){
 		//M�TODOS CLASE PATH
-		System.out.println("-----------"+p.toString());
-		System.out.println("getFileName:"+ p.getFileName());
-	/*	System.out.println("getName(0):"+ p.getName(0));
-		System.out.println("getNameCount:"+ p.getNameCount());
-		System.out.println("subpath(0,2):"+ p.subpath(0,2));
-		System.out.println("getParent:"+ p.getParent());*/
-		System.out.println("getRoot:"+ p.getRoot());
-		System.out.println("Path absoluto:"+p.toAbsolutePath());
+		//ESTOS METODOS POR AHORA NO SIRVEN 
+		System.out.println("-----------"+p.toString()) ; //Se pasa el contenido de path a formato de String
+		System.out.println("getFileName:"+ p.getFileName()); 
+	/*	System.out.println("getName(0):"+ p.getName(0)); //?
+		System.out.println("getNameCount:"+ p.getNameCount()); //?
+		System.out.println("subpath(0,2):"+ p.subpath(0,2)); //?
+		System.out.println("getParent:"+ p.getParent());*/ //?
+		System.out.println("getRoot:"+ p.getRoot()); //? p.getRoot 
+		System.out.println("Path absoluto:"+p.toAbsolutePath()); //? 
 		try{
 			System.out.println("realPath:"+p.toRealPath());
 		}

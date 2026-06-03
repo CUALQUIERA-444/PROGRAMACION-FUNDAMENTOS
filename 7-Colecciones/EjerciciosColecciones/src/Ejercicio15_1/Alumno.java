@@ -28,7 +28,7 @@ public class Alumno {
 		this.nombre = nombre;
 	} //Puede modificar su nota
 	
-	public boolean equals(Object obj) { //Bueno quizas para el 5
+	public boolean equals(Object obj) { //NO
 		if (this == obj)
 			return true;
 		if (obj == null)
